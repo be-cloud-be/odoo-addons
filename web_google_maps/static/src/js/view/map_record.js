@@ -3,7 +3,7 @@ odoo.define('web_google_maps.Record', function (require) {
 
     var core = require('web.core');
     var data = require('web.data');
-    var formats = require('web.formats');
+    //var formats = require('web.formats');
     var session = require('web.session');
     var time = require('web.time');
     var utils = require('web.utils');
@@ -47,7 +47,7 @@ odoo.define('web_google_maps.Record', function (require) {
                 widget: this,
                 read_only_mode: this.read_only_mode,
                 user_context: session.user_context,
-                formats: formats,
+                //formats: formats,
                 map_image: this.map_image
             };
             for (var p in this) {
@@ -76,7 +76,7 @@ odoo.define('web_google_maps.Record', function (require) {
                 } else {
                     r.raw_value = value;
                 }
-                r.value = formats.format_value(value, r);
+                //r.value = formats.format_value(value, r);
                 new_record[name] = r;
             });
             return new_record;
